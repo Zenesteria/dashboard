@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body {
   padding: 0;
@@ -5,6 +10,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+
 
 a {
   color: inherit;
@@ -15,7 +22,49 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+.notification::after{
+  content: attr(data-count);
+  position: absolute;
+  right: -30%;
+  top: -40%;
+  width: 20px;
+  aspect-ratio: 1/1;
+  font-weight: bold;
+  border-radius: 9999px;
+  background-color: rgb(255, 94, 0);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.iconContainer:hover > .iconItem::before{
+  opacity: 1;
+  display: block;
+}
+
+
+.iconItem::before{
+  content: attr(data-icon-name);
+  position: absolute;
+  bottom: -220%;
+  right: -120%;
+  text-align: center;
+  opacity: 0;
+  display: none;
+  transition: .3s;
+  padding: 0.25rem 0.5rem;
+  background-color: rgb(47, 57, 71);
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+
+
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -23,4 +72,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
