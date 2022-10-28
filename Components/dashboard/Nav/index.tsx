@@ -67,6 +67,7 @@ export default function Nav({}:compProp) {
           padding:'2.5rem 1rem 1rem 1rem',
           borderBottom:'0.5px solid rgba(255,255,255,0.5)',
           height:'100%',
+          fontSize:'1.3rem'
         }}>
             <Typography sx={{
             fontWeight:'bold',
@@ -103,12 +104,12 @@ export default function Nav({}:compProp) {
               Contact Us
           </Typography>
 
-          <Button className='bg-[#00FFFD]' sx={{
+          <Button className='bg-[#9EEFE5]' sx={{
             color:'black',
             width:'100%',
             paddingY:'1rem',
             '&:hover':{
-              backgroundColor:'cyan',
+              backgroundColor:'#9EEFE5',
               letterSpacing:'0.15rem'
             },
             transition:'0.3s',

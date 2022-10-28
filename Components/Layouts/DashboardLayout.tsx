@@ -6,12 +6,13 @@ import { DashboardNav, UserNav } from '../dashboard'
 export default function DashboardLayout({children}:any) {
   return (
     <>
-        <Box height={'100vh'} color='white'>
+        <Box height={'fit-content'} sx={{fontFamily:'Raleway, sans-serif !important'}} color='white'>
             <Box sx={{
                 position:'fixed',
                 backgroundColor:'red',
                 width:'100%',
-                height:'0'
+                height:'0',
+                zIndex:'99999'
                 
             }}>
                 <SplitLayout leftWeight={1} rightWeight={4}>
@@ -21,11 +22,12 @@ export default function DashboardLayout({children}:any) {
             </Box>
             
             <SplitLayout leftWeight={1} rightWeight={4}>
-                <></>
+                <Box></Box>
                 <Box sx={{
-                    backgroundColor:'#123038',
+                    backgroundColor:'#053F4D',
                     padding:'15vh 1rem 1rem 2rem',
-                    width:'100%'
+                    width:'100%',
+                    height:'fit-content'
                 }}>
                     <>
                     {children}

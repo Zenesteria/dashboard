@@ -18,7 +18,7 @@ export default function NavLink({icon, txt, path}:{icon:any, txt:string, path:st
                 marginY:'1rem',
                 transitionDuration:'0.3s',
                 backgroundColor:active ? 'rgba(255,255,255,0.08)':'transparent',
-                color:active ? 'cyan' : 'inherit',
+                color:active ? '#EBD494' : 'inherit',
                 '&:hover': {
                     backgroundColor: 'rgba(255,255,255, 0.08)'
                 },
